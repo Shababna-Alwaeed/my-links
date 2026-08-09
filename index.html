@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>جاري التحويل...</title>
+    <script>
+        // 1. خريطة الروابط المختصرة والوجهات
+        const redirectMap = {
+            "muhammed-hossam": "https://shababna-alwaeed.github.io/site/#member-1",
+            "mustafa-alalfi": "https://shababna-alwaeed.github.io/site/#member-2",
+            "muhammed-samir": "https://shababna-alwaeed.github.io/site/#member-3",
+          "yousef-sayed": "https://shababna-alwaeed.github.io/site/#member-4",
+          "ahmed-gamal": "https://shababna-alwaeed.github.io/site/#member-5",
+          "Rumaisa Khaled": "https://shababna-alwaeed.github.io/site/#member-6",
+          "mahmoud-tamer": "https://shababna-alwaeed.github.io/site/#member-7",
+          "mariem-ehab": "https://shababna-alwaeed.github.io/site/#member-8",
+          "abdelrahman-gharib": "https://shababna-alwaeed.github.io/site/#member-14",
+          "david-emeil": "https://shababna-alwaeed.github.io/site/#member-15",
+          "malak-ahmed": "https://shababna-alwaeed.github.io/site/#member-10",
+          "abdelrahman-gamal": "https://shababna-alwaeed.github.io/site/#member-12",
+          "mohaned": "https://shababna-alwaeed.github.io/site/#member-9",
+          "habiba": "https://shababna-alwaeed.github.io/site/#member-11",
+        };
+
+        // الرابط الاحتياطي لو المسار غير موجود في القائمة
+        const fallbackUrl = "https://facebook.com";
+
+        // 2. استخراج الكلمة التي بعد آخر سلاش (مثلاً "sasa")
+        const currentPath = window.location.pathname.split('/').filter(Boolean).pop();
+
+        // 3. التحويل الفوري السريع
+        if (redirectMap[currentPath]) {
+            window.location.replace(redirectMap[currentPath]);
+        } else {
+            window.location.replace(fallbackUrl);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
